@@ -1,10 +1,9 @@
-" vim settings
+"  Made by LEON WANDRUSCHKA
 syntax on
 filetype plugin indent on
 
 set exrc
 set secure
-
 set number
 set relativenumber
 set tabstop=2
@@ -23,6 +22,9 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'preservim/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'LeonWandruschka/DoxygenToolkit.vim'
+Plug 'preservim/tagbar'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/remote', 'do': ':UpdateRemotePlugins' }
 
 call plug#end()
 
@@ -44,7 +46,6 @@ vnoremap ## <ESC>
 onoremap ## <ESC>
 
 " Remap Arrows
-
 noremap <Up> <nop>
 noremap <Down> <nop>
 noremap <Left> <nop>
@@ -56,9 +57,14 @@ inoremap <Left> <nop>
 inoremap <Right> <nop>
 
 " Remap insertmode move
+inoremap <silent> <C-j> <Down>
+inoremap <silent> <C-k> <Up>
+inoremap <silent> <C-h> <Left>
+inoremap <silent> <C-l> <Right>
 
 
-" use <tab> to trigger completion and navigate to the next complete item
+
+" COC Tab-completion
 function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
@@ -76,11 +82,21 @@ nnoremap <c-b> <ESC>:NERDTreeToggle<cr>
 inoremap <c-f> <ESC>:NERDTreeFocus<cr>
 nnoremap <c-f> <ESC>:NERDTreeFocus<cr>
 
+
+" Tagbar
+inoremap <c-t> <ESC>:TagbarToggle<cr>
+nnoremap <c-t> <ESC>:TagbarToggle<cr>
+
+
+" AutoPairs
+let g:AutoPairsMapCh = 0
+
+
 " doxygen config
 let g:DoxygenToolkit_commentType = "C++"
 let g:DoxygenToolkit_blockHeader = ""
 let g:DoxygenToolkit_blockFooter = ""
 let g:DoxygenToolkit_blockHeader_AuthorBlock = "-----------------------------------------------------------------------------"
 let g:DoxygenToolkit_blockFooter_AuthorBlock = "-----------------------------------------------------------------------------"
-let g:DoxygenToolkit_GroupID = "Group: Markus Meierhofer"
+let g:DoxygenToolkit_GroupID = "Group: <id>"
 let g:DoxygenToolkit_authorName = "Author: Leon Wandruschka (12206109)"
