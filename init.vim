@@ -27,6 +27,10 @@ Plug 'preservim/tagbar'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 "Plug 'yuki-yano/fzf-preview.vim', { 'branch': 'release/rpc' }
 Plug 'junegunn/fzf.vim'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+Plug 'tpope/vim-fugitive'
+
 call plug#end()
 
 "Set Colorscheme Nightfox
@@ -35,7 +39,17 @@ call plug#end()
 "Set Colorscheme Molokai
 ":colorscheme molokai
 
-" use <tab> to trigger completion and navigate to the next complete item
+
+"Airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme = 'onedark'
+let g:airline#extensions#whitespace#enabled = 0
+let g:airline#extensions#branch#enabled = 1
+let g:airline_section_z = "%3p%% %l:%c"
+let g:airline_skip_empty_sections = 1
+
+
+"use <tab> to trigger completion and navigate to the next complete item
 function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1]  =~# '\s'
@@ -77,7 +91,7 @@ let g:DoxygenToolkit_blockHeader = ""
 let g:DoxygenToolkit_blockFooter = ""
 let g:DoxygenToolkit_blockHeader_AuthorBlock = "-----------------------------------------------------------------------------"
 let g:DoxygenToolkit_blockFooter_AuthorBlock = "-----------------------------------------------------------------------------"
-let g:DoxygenToolkit_GroupID = "Group: Team DE-5"
-let g:DoxygenToolkit_authorName = "Author: Leon Wandruschka"
+let g:DoxygenToolkit_GroupID = "Group: <id>"
+let g:DoxygenToolkit_authorName = "Author: <author>"
 
 
