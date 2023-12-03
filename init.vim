@@ -16,7 +16,9 @@ set mouse=a
 
 call plug#begin()
 
-Plug 'EdenEast/nightfox.nvim' " Color Scheme
+Plug 'EdenEast/nightfox.nvim' " Nightfox Color Scheme
+"Plug 'flazz/vim-colorschemes' " Molokai Color Scheme
+
 Plug 'neoclide/coc.nvim'
 Plug 'jiangmiao/auto-pairs'
 Plug 'preservim/nerdtree'
@@ -27,8 +29,11 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 call plug#end()
 
-"Set Colorscheme 
+"Set Colorscheme Nightfox
 :colorscheme nightfox
+
+"Set Colorscheme Molokai
+":colorscheme molokai
 
 " use <tab> to trigger completion and navigate to the next complete item
 function! CheckBackspace() abort
@@ -74,4 +79,5 @@ let g:DoxygenToolkit_blockHeader_AuthorBlock = "--------------------------------
 let g:DoxygenToolkit_blockFooter_AuthorBlock = "-----------------------------------------------------------------------------"
 let g:DoxygenToolkit_GroupID = "Group: Team DE-5"
 let g:DoxygenToolkit_authorName = "Author: Leon Wandruschka"
+
 
