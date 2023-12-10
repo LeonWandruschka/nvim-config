@@ -16,8 +16,8 @@ set mouse=a
 
 call plug#begin()
 
-Plug 'EdenEast/nightfox.nvim' " Nightfox Color Scheme
-"Plug 'flazz/vim-colorschemes' " Molokai Color Scheme
+"Plug 'EdenEast/nightfox.nvim' " Nightfox Color Scheme
+Plug 'flazz/vim-colorschemes' " Molokai Color Scheme
 
 Plug 'neoclide/coc.nvim'
 Plug 'jiangmiao/auto-pairs'
@@ -34,10 +34,10 @@ Plug 'tpope/vim-fugitive'
 call plug#end()
 
 "Set Colorscheme Nightfox
-:colorscheme nightfox
+":colorscheme nightfox
 
 "Set Colorscheme Molokai
-":colorscheme molokai
+:colorscheme molokai
 
 
 "Airline
@@ -76,8 +76,8 @@ inoremap <c-f> <Esc>:NERDTreeFocus<cr>
 nnoremap <c-f> <Esc>:NERDTreeFocus<cr>
 
 
-nnoremap <c-t> :TagbarToggle<cr>
-inoremap <c-t> :TagbarToggle<cr>
+nnoremap <c-t> <Esc>:TagbarToggle<cr>
+inoremap <c-t> <Esc>:TagbarToggle<cr>
 
 let g:tagbar_autofocus = 1
 
@@ -89,8 +89,8 @@ let g:AutoPairsMapCh = 0
 let g:DoxygenToolkit_commentType = "C++"
 let g:DoxygenToolkit_blockHeader = ""
 let g:DoxygenToolkit_blockFooter = ""
-let g:DoxygenToolkit_blockHeader_AuthorBlock = "-----------------------------------------------------------------------------"
-let g:DoxygenToolkit_blockFooter_AuthorBlock = "-----------------------------------------------------------------------------"
+let g:DoxygenToolkit_blockHeader_AuthorBlock = "----------------------------------------"
+let g:DoxygenToolkit_blockFooter_AuthorBlock = "----------------------------------------"
 let g:DoxygenToolkit_GroupID = "Group: <id>"
 let g:DoxygenToolkit_authorName = "Author: <author>"
 
