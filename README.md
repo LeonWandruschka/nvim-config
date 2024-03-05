@@ -42,7 +42,7 @@ right afterwards execute ```:CocCommand clangd.install```
 Update System
 
 ```zsh
-sudo apt update && sudo apt ugrade -y
+sudo apt update && sudo apt upgrade -y
 ```
 
 Install Git and vim
@@ -77,6 +77,9 @@ sudo snap install --beta nvim --classic
 
 Install [FONT](https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#meslo-nerd-font-patched-for-powerlevel10k)
 
+Set Terminal -> preferences to custom font and choose MelsoGS NF
+
+
 ### Setup Console (optional)
 
 Install zsh
@@ -101,6 +104,13 @@ Set the ZSH theme to powerlevel10k!
 
 ZSH_THEME="powerlevel10k/powerlevel10k" in ~/.zshrc
 
+Close Terminal!
+
+Now set a custom command in the terminal Preferences to call ```zsh```
+
+Reopen Terminal and follow powerlevel10k config.
+
+
 **Back to neovim**
 
 Install vimplug (packagemanager)
@@ -119,7 +129,9 @@ Open nvim and press ENTER on upcoming warnings!
 
 Enter ```:PlugInstall``` and wait till all plugins are isntalled
 
-Goto: ```~/.local/share/nvim/plugged/coc.nvim/```
+Use two times after each other ```:q``` to quit neovim ;)
+
+Goto: ```cd ~/.local/share/nvim/plugged/coc.nvim/```
 and use ```sudo npm ci``` to build (can take a while)
 
 Now neovim is setup!
