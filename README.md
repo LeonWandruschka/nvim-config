@@ -145,3 +145,58 @@ curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/lates
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit /usr/local/bin
 ```
+
+## Keybindings and Useful Commands
+
+### Navigation
+
+- **Up:** `k`
+- **Down:** `j`
+- **Left:** `h`
+- **Right:** `l`
+- **Move around in splits:** `Ctrl + w, < h | j | k | l >`
+- **Move splits around:** `Ctrl + w, Shift + < h | j | k | l >`
+- **Resize splits:** `Ctrl + w, < + | - | < | > >`
+
+### Moving Around in Insert and Command Line Mode
+
+- **Move Down:** `Ctrl + j`
+- **Move Up:** `Ctrl + k`
+- **Move Left:** `Ctrl + h`
+- **Move Right:** `Ctrl + l`
+- **Delete:** `Ctrl + d`
+
+### Working with Splits
+
+- **Move around in splits:** `Ctrl + w, < h | j | k | l >`
+- **Move splits around:** `Ctrl + w, Shift + < h | j | k | l >`
+- **Resize splits:** `Ctrl + w, < + | - | < | > >`
+
+### Additional Commands
+
+- **Open man page:** `:Man <function>`
+- If GDB is installed, you can use:
+  - `:packadd termdebug`
+  - `:Termdebug <gdb-arguments>`
+- **Open/close file tree:** `Ctrl + b` *(Updated: Toggle with `NvimTreeToggle`)*
+- **Set focus on file tree:** `Ctrl + f` *(Updated: Focus with `NvimTreeFocus`)*
+- If Exuberant Ctags is installed:
+  - `Ctrl + t` *(Updated: Toggle with `TagbarToggle`)*
+- **Open terminal on the bottom:** `Alt + t` *(Updated: Toggle with a custom height of 5 lines)*
+
+### Terminal Functionality
+
+- **Toggle terminal:** `Alt + t` *(Enhanced to toggle on/off with custom height)*
+- **Exit terminal mode:** `Esc` *(For moving back to normal mode in terminal)*
+- **Force quit:** `:q!` *(Within terminal mode)*
+
+### File and Tag Management
+
+- **Toggle file tree:** `Ctrl + b` *(Updated to use `NvimTreeToggle` for both insert and normal modes)*
+- **Focus on file tree:** `Ctrl + f` *(Updated to use `NvimTreeFocus` for both insert and normal modes)*
+- **Toggle tag bar:** `Ctrl + t` *(Updated to use `TagbarToggle` for both insert and normal modes)*
+
+### Search Files
+
+- **Search files:** `Ctrl + p` *(Mapped to trigger `:Files` command)*
+
