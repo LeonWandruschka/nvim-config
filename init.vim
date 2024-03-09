@@ -70,7 +70,6 @@ inoremap <silent> <C-j>      <Down>
 inoremap <silent> <C-k>      <Up>
 inoremap <silent> <C-h>      <Left>
 inoremap <silent> <C-l>      <Right>
-inoremap <silent> <C-f>      <Right>
 inoremap <silent> <C-d>      <Del>
 
 inoremap <c-b> <Esc>:NvimTreeToggle<cr>
@@ -105,9 +104,6 @@ let g:DoxygenToolkit_blockHeader_AuthorBlock = "--------------------------------
 let g:DoxygenToolkit_blockFooter_AuthorBlock = "----------------------------------------"
 let g:DoxygenToolkit_GroupID = "Group: <id>"
 let g:DoxygenToolkit_authorName = "Author: <author>"
-
-
-
 
 
 "Terminal Function
