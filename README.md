@@ -1,6 +1,19 @@
 # Current NEOVIM config
 
-## Setup on MAC
+- [Current NEOVIM config](#current-neovim-config)
+  - [Setup macOS](#setup-macos)
+  - [Setup Ubuntu](#setup-ubuntu)
+    - [Setup Console (optional)](#setup-console-optional)
+  - [Keybindings and Useful Commands](#keybindings-and-useful-commands)
+    - [Navigation](#navigation)
+    - [Moving Around in Insert and Command Line Mode](#moving-around-in-insert-and-command-line-mode)
+    - [Working with Splits](#working-with-splits)
+    - [Additional Commands](#additional-commands)
+    - [Terminal Functionality](#terminal-functionality)
+    - [File and Tag Management](#file-and-tag-management)
+    - [Search Files](#search-files)
+
+## Setup macOS
 
 Install neovim:\
 ```brew install neovim```
