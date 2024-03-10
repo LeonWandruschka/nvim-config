@@ -13,6 +13,7 @@
 " 10. Autopairs
 " 11. Doxygen Toolkit Settings
 " 12. Terminal Functionality
+" 13. Clang-Format
 
 " 1. Basic Settings
 syntax on
@@ -105,6 +106,12 @@ inoremap <c-t> <Esc>:TagbarToggle<cr>
 let g:tagbar_autofocus = 1
 
 " 9. FZF Configuration
+command! -bang ProjectFiles 
+            \ call fzf#vim#files(
+            \ '~/projects',
+            \ {'options': ['--layout=reverse', '--info=inline', '--preview', 'cat {}']},
+            \ <bang>0)
+
 nnoremap <C-p> :Files <Cr>
 
 " 10. Autopairs
@@ -151,3 +158,6 @@ tnoremap <A-t> <C-\><C-n>:call TermToggle(5)<CR>
 " Terminal Go Back to Normal Mode
 tnoremap <Esc> <C-\><C-n>
 tnoremap :q! <C-\><C-n>:q!<CR>
+
+" 13. Clang-Format
+command! -buffer -nargs=0 Cf execute 'silent !clang-format -i ' . expand('%:p') . ' -style=file:' . $HOME . '/.config/nvim/.clang-format' | edit!

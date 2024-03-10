@@ -12,6 +12,7 @@
     - [Terminal Functionality](#terminal-functionality)
     - [File and Tag Management](#file-and-tag-management)
     - [Search Files](#search-files)
+    - [Clang Format](#clang-format)
 
 ## Setup macOS
 
@@ -25,14 +26,14 @@ Install yarn:\
 ```pm install -g yarn```
 
 Install vim-plug:
-```
+
+```zsh
 sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
        https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
 ```
 
 Clone Repository into ~/.config/nvim:\
 ```git clone https://github.com/LeonWandruschka/nvim-config.git ~/.config/nvim/```
-
 
 Now open neovim and execute ```:PlugInstall```
 
@@ -46,9 +47,6 @@ Now open neovim again:\
 
 After opening neovim execute ```:CocInstall coc-clangd``` and\
 right afterwards execute ```:CocCommand clangd.install```
-
-
-
 
 ## Setup Ubuntu
 
@@ -92,7 +90,6 @@ Install [FONT](https://github.com/romkatv/powerlevel10k?tab=readme-ov-file#meslo
 
 Set Terminal -> preferences to custom font and choose MelsoGS NF
 
-
 ### Setup Console (optional)
 
 Install zsh
@@ -123,7 +120,6 @@ Now set a custom command in the terminal Preferences to call ```zsh```
 
 Reopen Terminal and follow powerlevel10k config.
 
-
 **Back to neovim**
 
 Install vimplug (packagemanager)
@@ -149,15 +145,20 @@ and use ```sudo npm ci``` to build (can take a while)
 
 Now neovim is setup!
 
-
 Additional programs that are nice:
 lazy git:
+
 ```zsh
 LAZYGIT_VERSION=$(curl -s "https://api.github.com/repos/jesseduffield/lazygit/releases/latest" | grep -Po '"tag_name": "v\K[^"]*')
 curl -Lo lazygit.tar.gz "https://github.com/jesseduffield/lazygit/releases/latest/download/lazygit_${LAZYGIT_VERSION}_Linux_x86_64.tar.gz"
 tar xf lazygit.tar.gz lazygit
 sudo install lazygit /usr/local/bin
 ```
+
+- **PULL:** `p`
+- **PUSH:** `P`
+- **ADD:** Move to file using `h` & `l` and press `SPACE`
+- **Commit** `c`
 
 ## Keybindings and Useful Commands
 
@@ -212,4 +213,17 @@ sudo install lazygit /usr/local/bin
 ### Search Files
 
 - **Search files:** `Ctrl + p` *(Mapped to trigger `:Files` command)*
+- **Close without opening File:** `Ctrl + c`
 
+### Clang Format
+
+A `clang-format` configuration file is provided at `~/.config/nvim/.clang-format`.
+This configuration file is used to format files in Neovim.
+You are welcome to modify this file according to your preferences or replace it with your own.
+
+To specify a different `clang-format` configuration file, navigate to your `init.vim` file and locate section 13.
+You can update the file path within this section to point to your desired `clang-format` configuration file.
+By default, it points to `~/.config/nvim/.clang-format`.
+
+To format the currently opened file using `clang-format`, you can use the `:Cf` command.
+Simply execute `:Cf` within Neovim to apply the formatting.
