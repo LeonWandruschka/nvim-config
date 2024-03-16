@@ -227,3 +227,12 @@ By default, it points to `~/.config/nvim/.clang-format`.
 
 To format the currently opened file using `clang-format`, you can use the `:Cf` command.
 Simply execute `:Cf` within Neovim to apply the formatting.
+
+### Copy to Clipboard
+
+Check if copy to clipboard is enabled on your  system using the following:
+```:echo has('clipboard')```
+If this returns 1 copying stuff to the clipboard will be easy.
+
+Just use ```:%y+``` to copy the whole file or select the part you want to copy using the visual mode and then use ```:'<,'>y+```
+
